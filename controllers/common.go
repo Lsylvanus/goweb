@@ -4,8 +4,8 @@ import (
 	"github.com/astaxie/beego/logs"
 
 	"io"
-	"net/http"
 	"time"
+	"net/http"
 	"io/ioutil"
 )
 

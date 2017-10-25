@@ -1,11 +1,13 @@
 package controllers
 
 import (
+	"goweb/models"
+
 	"github.com/astaxie/beego"
+	"github.com/astaxie/beego/logs"
+
 	"strings"
 	"encoding/json"
-	"goweb/models"
-	"github.com/astaxie/beego/logs"
 )
 
 type (
