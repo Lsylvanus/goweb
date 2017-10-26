@@ -5,14 +5,14 @@ import (
 	"goweb/job"
 )
 
-type MonitorController struct  {
-	 BaseController
+type MonitorController struct {
+	BaseController
 }
 
-func (this *MonitorController)Index()  {
+func (this *MonitorController) Index() {
 
 	jobManger := job.NewJobMnager()
-	jobList,err := jobManger.GetJobSnapshotList()
+	jobList, err := jobManger.GetJobSnapshotList()
 	if err != nil {
 		common.PanicIf(err)
 
@@ -22,5 +22,3 @@ func (this *MonitorController)Index()  {
 	this.Data["jobList"] = jobList
 	this.Render()
 }
-
-

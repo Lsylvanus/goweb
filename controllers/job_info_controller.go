@@ -2,8 +2,8 @@ package controllers
 
 import (
 	"goweb/common"
-	"goweb/models"
 	"goweb/job"
+	"goweb/models"
 
 	"time"
 )
@@ -150,7 +150,6 @@ func (this *JobInfoManagerController) Edit() {
 		jobInfo.ModifyTime = time.Now()
 		err := jobInfo.UpdateJobInfo()
 		if err != nil {
-
 			jsonResult.Message = err.Error()
 		} else {
 			jsonResult.Message = "更新成功"
@@ -180,8 +179,8 @@ func (this *JobInfoManagerController) Delete() {
 		jobManger.DeleteJob(id)
 		jobInfo := models.JobInfo{Id: id}
 		err = jobInfo.DeleteJobInfo()
-		if err != nil {
-			jsonResult.Message = "删除失败,请重试"
+		if err == nil {
+			jsonResult.Message = "删除失败, 请重试"
 		} else {
 			jsonResult.Message = "删除成功"
 			jsonResult.Success = true

@@ -1,23 +1,23 @@
 package controllers
 
 import (
-	"goweb/models"
 	"goweb/common"
+	"goweb/models"
 )
 
 // 任务详情历史控制器
-type JobInfoHistoryController struct  {
-	 BaseController
+type JobInfoHistoryController struct {
+	BaseController
 }
 
 // jobinfohistory list
-func  (this *JobInfoHistoryController) List()  {
+func (this *JobInfoHistoryController) List() {
 
 	name := this.GetString("Name")
 	group := this.GetString("Group")
 
-	history := models.JobInfoHistory{Name:name,Group:group}
-	historys,err := history.FindAllJobInfoList()
+	history := models.JobInfoHistory{Name: name, Group: group}
+	historys, err := history.FindAllJobInfoList()
 
 	common.PanicIf(err)
 	this.Data["historys"] = historys
