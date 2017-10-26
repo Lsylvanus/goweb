@@ -10,8 +10,8 @@ import (
 )
 
 var (
-	Error_EXISTS_JOB     = errors.New("exists job error !")
-	Error_NOT_EXISTS_JOB = errors.New("not exists job error !")
+	Error_EXISTS_JOB     = errors.New("exists job error ! ")
+	Error_NOT_EXISTS_JOB = errors.New("not exists job error ! ")
 )
 
 // defind the job call method

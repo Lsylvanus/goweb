@@ -7,12 +7,10 @@ import (
 )
 
 type BaseController struct {
-
 	beego.Controller
-
 }
 
-func (this *BaseController)Prepare()  {
+func (this *BaseController) Prepare() {
 	log.Println("Prepare.....")
 
 	var m map[string]string = make(map[string]string)

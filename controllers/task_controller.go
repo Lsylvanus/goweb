@@ -1,8 +1,6 @@
 package controllers
 
-
 // 任务控制类
-type TaskController struct  {
+type TaskController struct {
 	BaseController
 }
-
