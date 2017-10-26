@@ -1,4 +1,4 @@
-# ![Logo created by @LsylvanusChu](logo_white_35_24.png) goweb
+# ![Logo created by @Lsylvanus](logo_white_35_24.png) goweb
 a web demo of beego
 
 ## Look for details

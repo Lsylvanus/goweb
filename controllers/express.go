@@ -2,8 +2,8 @@ package controllers
 
 import (
 	"goweb/models"
+	"goweb/common"
 
-	"github.com/astaxie/beego"
 	"github.com/astaxie/beego/logs"
 
 	"strings"
@@ -12,7 +12,7 @@ import (
 
 type (
 	ExpressController struct {
-		beego.Controller
+		common.BeeControllers
 	}
 )
 
@@ -30,7 +30,7 @@ func (e *ExpressController) Search() {
 		return
 	}
 	urlStr := "http://www.kuaidi100.com/query?type=" + strings.TrimSpace(comType) + "&postid=" + strings.TrimSpace(postId)
-	data, err := DoReq("GET", urlStr, nil)
+	data, err := common.DoReq("GET", urlStr, nil)
 	if err != nil {
 		e.Ctx.WriteString(err.Error())
 		return
